@@ -19,25 +19,3 @@ Once an administrator is authenticated with the site, they can initiate a proces
 A customer can add and remove ingredients from a shopping basket and submit an order. Once submitted, the customer and the administrator(s) receive and email version of the order.
 
 If a designated user looses or forgets a password, a special recovery process through email will be impmemented. This will be discussed further in lecture. What is critical is the user carry out the entire process in the same browser session.
-
-Appearance
-
-The appearance of your site must be professional. We recognize that at one level 'Professional' is a vague term, but you are an experienced consumer of web content and should have your own understanding now of what is and is not a well designed site. We will of course discuss this in class and if in serious doubt, ask. As a guide, here are some general hints:
-
-Design broadly how you entend to structure your pages before building them. Answer for yourselves how you want layout to flow and then implement that flow consistently and smoothly.
-Keep it simple. A clean consistent reliable layout is better then one that is cluttered and inconsistent.
-You must use the Bootstrap Framework to support your implementation. Alternative Frameworks may be approved on case-by-case basis if a team wishes to ask.
-Have a color palette theme of your choice to maintain consistency and professional look and feel.
-Do think about font styling and size. Text elements whose size and appearance is out-of-step with its surroundings are visually jarring and generally unpleasant.
-Project Teams
-
-This project, as will be the case with all projects in this course, is a team programming exercise involving groups of two. In the working world, it is rare that one selects one's teammates, and so it will be here. New teams will be formed for each of the projects assigned through the course of the semester. You will be able to see your assigned team from within Canvas. It is up to you to then contact each other and make arrangements to work together.
-
-Each team will submit a single tar file "lastname1&lastname2.tar" with all the required files. Submission will be through Canvas.
-
-Do not use any web development application, for example Dreamweaver, to create your site. You are doing this work to gain experience writing HTML, CSS, PHP and Bootstrap. Also, always remember that your work will be tested with Chrome on department machines.
-
-Your Time Management
-
-You have all been told this before in other classes, but it needs to be stated here clearly. There is a lot required of you before you will have a full and complete solution to this assignment. Also, there are elements, such as authentication, where we will not cover the material associated with this part of the assignment until later. You are being given over a month to work on this and you are expected to start work immediately. Development is an incremental process and you and your team partner need to start setting intermediate goals; and then making those goals. If you wait until one week before this assignment is due then one of two things will happen. By far the most likely outcome is you fall far short of the requirements. Much less likely, you will demonstrate a rare talent for coming through in the eleventh hour; please do not count on this second option working.
-
