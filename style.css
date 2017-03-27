@@ -1,0 +1,153 @@
+/*Color scheme:
+Grape - #94618E;
+Eggplant - #49274A;
+Sand - #F4DECB;
+Shell - #F8EEE7;
+*/
+html, body{
+  width: 100%;
+  height: 100%;
+  margin 0;
+  padding: 0;
+}
+body{
+  font-family: 'Marck Script', cursive;
+  background-color: #F8EEE7;
+  color: #49274A;
+}
+
+.jumbotron{
+  background-color: #94618E;
+}
+.jumbotron #logo{
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+}
+.jumbotron #title{
+  display: inline-block;
+  float: center;
+}
+
+#myNav{
+  background-color: #F4DECB;
+  font-size: 20px;
+}
+#home-message{
+  text-align: center;
+}
+#home-message p{
+  font-size: 18px;
+}
+.carousel-caption{
+  font-weight: bold;
+  color: #FFF;
+  font-size: 18px;
+}
+#footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#footerLeft{
+  text-align: left;
+}
+#footerCenter{
+  text-align: center;
+}
+#footerRight{
+  text-align: right;
+}
+#comment{
+  margin-left: 10px;
+}
+.ing{
+    text-align: center;
+}
+
+/****** LOGIN MODAL from http://bootsnipp.com/snippets/featured/clean-modal-login-form ******/
+#login{
+  margin: 20px;
+  font-size: 20px;
+}
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F8EEE7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+}
+.loginmodal-container p {
+  font-size: 12px;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+}
+
+.loginmodal-submit {
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #94618E;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 14px;
+}
+
+.loginmodal-submit:hover {
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #49274A;
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
