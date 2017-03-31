@@ -1,7 +1,5 @@
 # CT310Proj2
 Overview: A Web Managed Ingredients Site.
-
-This is a Paired Programming Project. It is the second in a three part semester project working toward a class federation of fresh ingredients supply websites. Teams will be assigned through Canvas by close of Friday 3/10/17. You will have a new partner, and one of the first challenged of his assignment is deciding how best to integrate exiting code from your respective project 1 sites.
 <br /><br />
 This project extends the previous project in five major ways:<br />
 
