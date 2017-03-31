@@ -1,5 +1,11 @@
-<!-- Include header -->
-<?php include 'header.php'; ?>
+<!-- Includes -->
+<?php
+$loginPage = FALSE;
+$helpPage = FALSE;
+include 'support.php';
+include 'control.php';
+include 'header.php';
+?>
 
 <!-- create three coulumn with lg and md size  -->
 <div class="container-fluid" id="content">
