@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta name="description" content="IFY">
-  <meta name="author" content="Collin Kinchen &amp; Asa Staven">
+  <meta name="author" content="Kevin Magnus &amp; Asa Staven">
   <meta name="keywords" content="HTML,CSS,Web,Development,PHP,ingredients,ct310,fresh">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +42,7 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ingredients<span class="caret"></span></a>
             <ul class="dropdown-menu">
+            <!-- TODO: There will no longer be a page for these -->
               <li><a href="./MapleSugar.php">Maple Sugar</a></li>
               <li><a href="./Nori.php">Nori</a></li>
               <li><a href="./SesameSeed.php">Sesame Seed</a></li>
