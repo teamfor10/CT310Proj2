@@ -52,6 +52,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          <li><a href="shoppingCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
         </ul>
       </div>
     </div>
