@@ -3,7 +3,7 @@
 	<div class="row visible-on">
 		<div class="hidden-xs col-md-3 col-lg-4" id="footerLeft">
 			<?php
-				echo "<p>Copyright &copy; 2017 Collin Kinchen &amp; Asa Staven</p>";
+				echo "<p>Copyright &copy; 2017 Kevin Mangus &amp; Asa Staven</p>";
 			?>
 		</div>
 		<!-- End of footer left division -->
