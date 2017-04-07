@@ -20,8 +20,10 @@
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
     <div id="Kevin Magnus">
         <h2 style="text-align:center;">Kevin Magnus</h2>
-        <div  style="text-align:center;" id="logo"><img src="./images/collinheadshot.jpg" height="130px" width="auto"></div>
-        <p style="text-align:center; font-size: 18px;">Hello my name is Kevin Magnus
+        <div  style="text-align:center;" id="logo"><img src="./images/kev.jpg" height="130px" width="auto"></div>
+        <p style="text-align:center; font-size: 18px;">Hello! My name is Kevin Mangus. I am a Senior at Colorado State University.
+        <br/>I am studying Applied Computing Technology with a minor in Buisness Administration.
+        <br/>I am currently projected to graduate this fall in 2017 and currently have a student I.T job at CSU's Extension office.
         </p>
     </div>
 </div>
