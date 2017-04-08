@@ -56,12 +56,12 @@ session_name('IFY_02');
           <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
           <li><a href="./logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
           
-          <?php if(isset($_SESSION['userType']) == 'customer'){?>
+          <?php if(isset($_SESSION['userType']) && $_SESSION['userType'] == 'customer'){?>
           <li><a href="./shoppingCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
           <?php } ?>
 
-          <?php if(isset($_SESSION['userType']) == 'admin'){?>
-          <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add Ingredients</a></li>
+          <?php if(isset($_SESSION['userType']) && $_SESSION['userType'] == 'admin'){?>
+          <li><a href="./addIngredients"><span class="glyphicon glyphicon-plus"></span> Add Ingredients</a></li>
           <?php } ?>
         </ul>
       </div>

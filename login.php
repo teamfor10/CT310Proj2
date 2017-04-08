@@ -26,6 +26,7 @@
 
         if(getRole($users, $user) == 'admin'){
           $_SESSION['userType'] = 'admin';
+          
         }
         else{
           $_SESSION['userType'] = 'customer';
