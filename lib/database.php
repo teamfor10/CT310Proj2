@@ -1,5 +1,8 @@
 <?php
 require_once ("support.php");
+require_once ("comment.php");
+require_once ("ingredient.php");
+
 class Database extends PDO {
 	public function __construct() {
 		parent::__construct ( "sqlite:" . __DIR__ . "/../ify.db" );
@@ -19,6 +22,39 @@ class Database extends PDO {
 		$stm = $this->prepare( $sql );
 		return $stm->execute(array($h, $u));
 	}
+	function loadComments(){
+		$sql = "SELECT * FROM comments";
+		$result = $this->query ( $sql );
+		$coms = array ();
+		foreach ( $result as $row ) {
+			$coms [] = getCommentFromRow ( $row );
+		}
+		return $coms;
+	}
+	function loadIngredients($coms){
+		$sql = "SELECT * FROM ingredients";
+		$result = $this->query ( $sql );
+		$ings = array ();
+		foreach ( $result as $row ) {
+			$ings [] = getIngredientsFromRow ( $row, $coms );
+		}
+		return $ings;
+	}
+	function getIngredient($ing){
+		$sql1 = "SELECT * FROM ingredients
+							WHERE name = $ing";
+		$sql2 = "SELECT * FROM comments
+							WHERE ingredient = $ing";
+		$result1 = $this->query ( $sql1 );
+		$result2 = $this->query ( $sql2 );
+
+		$info = array ();
+		// foreach ( $result1 as $row ) {
+		// 	$albums [] = Album::getAlbumFromRow ( $row );
+		// }
+		return $info;
+	}
+
 	function addIngredient($ing, $pic, $cost){
 
 	}
@@ -48,20 +84,7 @@ class Database extends PDO {
 		// 		":id" => $album->id
 		// ) );
 	}
-	function getIngredient($ing){
-		$sql1 = "SELECT * FROM ingredients
-							WHERE name = $ing";
-		$sql2 = "SELECT * FROM comments
-							WHERE ingredient = $ing";
-		$result1 = $this->query ( $sql1 );
-		$result2 = $this->query ( $sql2 );
 
-		$info = array ();
-		// foreach ( $result1 as $row ) {
-		// 	$albums [] = Album::getAlbumFromRow ( $row );
-		// }
-		return $info;
-	}
 
 }
 function setupDB() {
