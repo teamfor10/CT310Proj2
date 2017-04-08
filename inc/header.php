@@ -33,25 +33,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="../index.php">Home</a>
+        <a class="navbar-brand" href="./index.php">Home</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li ><a href="../about.php">About Us</a></li>
+          <li ><a href="./about.php">About Us</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ingredients<span class="caret"></span></a>
             <ul class="dropdown-menu">
             <!-- TODO: There will no longer be a page for these -->
-              <li><a href="../MapleSugar.php">Maple Sugar</a></li>
-              <li><a href="../Nori.php">Nori</a></li>
-              <li><a href="../SesameSeed.php">Sesame Seed</a></li>
+              <li><a href="./MapleSugar.php">Maple Sugar</a></li>
+              <li><a href="./Nori.php">Nori</a></li>
+              <li><a href="./SesameSeed.php">Sesame Seed</a></li>
             </ul>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="../login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          <li><a href="../logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-          <li><a href="../shoppingCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+          <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="./logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          <li><a href="./shoppingCart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
         </ul>
       </div>
     </div>

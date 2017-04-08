@@ -3,6 +3,7 @@
 $loginPage = FALSE;
 $helpPage = FALSE;
 require_once "inc/page_setup.php";
+if (!$dbh = setupDB()) {die;}
 include 'inc/header.php';
 ?>
 
@@ -15,6 +16,8 @@ include 'inc/header.php';
       all of the time. Explore our wares and get a sense of that new<br />
       ingredient you need to put some excitement in the kitchen!<br />
       <strong>More Inventory coming soon!</strong></p>
+      <br />
+      <?php $dbh->printUsers(); ?>
   </div>
 
 <!-- Add Main Content here -->

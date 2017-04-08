@@ -4,6 +4,26 @@ class Database extends PDO {
 	public function __construct() {
 		parent::__construct ( "sqlite:" . __DIR__ . "/../ify.db" );
 	}
+	function setupDB() {
+		try {
+			$dbh = new Database();
+			return $dbh;
+		} catch ( PDOException $e ) {
+			return FALSE;
+		}
+	}
+	function printUsers(){
+		$sql = "SELECT * FROM users";
+		$result = $this->query ( $sql );
+		$users = array ();
+		foreach ( $result as $row ) {
+			$users [] = getUserFromRow ( $row );
+		}
+		foreach ( $users as $u ) {
+        echo "<p>$u->user_name, $u->hash, $u->email, $u->role</p><br />";
+    }
+	}
+	
 	function addIngredient($ing, $pic, $cost){
 
 	}
@@ -47,4 +67,5 @@ class Database extends PDO {
 		// }
 		return $info;
 	}
+
 }

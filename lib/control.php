@@ -51,7 +51,7 @@
             <input type='submit' name='login' class='login loginmodal-submit' value='Login'>
           </form>
           <!--<p><a href='signup.php'>Do Not Have Credentials?</a></p>-->
-          <p><a href='../fmp.php'>Forgot Your Password?</a></p>
+          <p><a href='./fmp.php'>Forgot Your Password?</a></p>
         </div>
       </div>
     </div>";
