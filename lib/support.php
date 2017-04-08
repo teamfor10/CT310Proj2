@@ -13,7 +13,9 @@ function makeNewUser($u, $h, $e, $r) {
 	$u->hash = (string)$h;
 	$u->email = (string)$e;
 	$u->role = (string)$r;
-	echo "<p>$u->user_name<p><br />";
+	if("astaven" == $u->user_name){
+		echo "<p>we have a match<p><br />";
+	}
 	return $u;
 }
 function getUserFromRow($row){
