@@ -6,6 +6,7 @@
     $users = readUsers();
   } else{
     $users = $dbh->loadUsers();
+    echo"<p>DB worked</p><br />";
   }
   include 'inc/header.php';
 ?>
