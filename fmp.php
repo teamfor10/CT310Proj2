@@ -7,7 +7,7 @@
   } else{
     $users = $dbh->loadUsers();
   }
-  include './inc/header.php';
+  include 'inc/header.php';
 ?>
 <div id="login">
   <?php if(isset($_POST['forgot'])):
@@ -32,4 +32,4 @@
   <?php endif; ?>
 </div>
 
-<?php include './inc/footer.php'; ?>
+<?php include 'inc/footer.php'; ?>

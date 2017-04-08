@@ -17,7 +17,6 @@
 
   // Finally, destroy the session.
   session_destroy();
-  echo "<p> You did it </p>";
-  // header ( "Location: https://$host$uri/login.php" );
+  header ( "Location: https://$host$uri/login.php" );
   exit();
 ?>
