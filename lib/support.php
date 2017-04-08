@@ -9,15 +9,15 @@ class User {
 }
 function makeNewUser($u, $h, $e, $r) {
 	$u = new User ();
-	$u->user_name = $u;
-	$u->hash = $h;
-	$u->email = $e;
-	$u->role = $r;
+	$u->user_name = (string)$u;
+	$u->hash = (string)$h;
+	$u->email = (string)$e;
+	$u->role = (string)$r;
+	echo "<p>$u->user_name<p><br />";
 	return $u;
 }
 function getUserFromRow($row){
 	$user = makeNewUser($row['username'], $row['hash'], $row['email'], $row['role']);
-	print_r($user);
 	return $user;
 }
 function setupDefaultUsers() {
