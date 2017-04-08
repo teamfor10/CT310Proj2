@@ -2,10 +2,10 @@
 require_once __DIR__ .'/../assets/passwordLib.php';
 
 class User {
-	public $user_name = 'johndoe'; /* User's login name */
-	public $hash = ''; /* Hash of password */
-	public $email = ''; /* User's email */
-	public $role = ''; /* User's role: admin or customer */
+	public $user_name; /* User's login name */
+	public $hash; /* Hash of password */
+	public $email; /* User's email */
+	public $role; /* User's role: admin or customer */
 }
 function makeNewUser($u, $h, $e, $r) {
 	$u = new User ();
@@ -14,6 +14,10 @@ function makeNewUser($u, $h, $e, $r) {
 	$u->email = $e;
 	$u->role = $r;
 	return $u;
+}
+function getUserFromRow($row){
+	$user = makeNewUser($row['username'], $row['hash'], $row['email'], $row['role']);
+	return $user;
 }
 function setupDefaultUsers() {
 	$line1 = 'user_name,hash,email,role' . "\n";

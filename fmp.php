@@ -2,7 +2,11 @@
   $loginPage = FALSE;
   $helpPage = TRUE;
   require_once "inc/page_setup.php";
-  $users = readUsers();
+  // $users = readUsers();
+  if (!$dbh = setupDB()) {
+    die;
+    // $users = readUsers();
+  }
   include './inc/header.php';
 ?>
 <div id="login">

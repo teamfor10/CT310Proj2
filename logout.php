@@ -1,9 +1,6 @@
 <?php
 $loginPage = FALSE;
 include 'inc/control.php';
-
-// http://php.net/manual/en/function.session-destroy.php
-//if(isset($_SESSION['username'])){
   // Unset all of the session variables.
   $_SESSION = array();
 
@@ -19,7 +16,6 @@ include 'inc/control.php';
 
   // Finally, destroy the session.
   session_destroy();
-//}
-header ( "Location: https://$host$uri/login.php" );
-exit();
+  header ( "Location: https://$host$uri/login.php" );
+  exit();
 ?>
