@@ -1,6 +1,5 @@
 <?php
-
-require_once "../assets/passwordLib.php";
+require_once __DIR__ .'/../assets/passwordLib.php';
 
 class User {
 	public $user_name = 'johndoe'; /* User's login name */
