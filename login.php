@@ -11,8 +11,9 @@
 ?>
 <div>
   <?php
-  // foreach ( $users as $u ) {
-  // }
+  foreach ($users as $u){
+			echo get_object_vars ($u);
+	}
   ?>
 </div>
 <div id="login">
