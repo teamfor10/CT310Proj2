@@ -17,11 +17,10 @@
     $user = filter_var($user, FILTER_SANITIZE_STRING); //Sanitize username
     $user = strtolower($user);
     $pass = trim($_POST['password']);
-    $pass = filter_var($pass, FILTER_SANITIZE_STRING); //sanitize password
+    $pass = filter_var($pass, FILTER_SANITIZE_STRING); //Sanitize password
   ?>
-    <?php if($user != $_SESSION['userName']):
-      if (password_verify($pass, userHashByName($users, $user))) {
-        echo "<p>Login was successful - $time</p>";
+    <?php if(password_verify($pass, userHashByName($users, $user))):
+      if($user != $_SESSION['userName']){
         $_SESSION ['startTime'] = $time;
         $_SESSION ['userName'] = $user;
       }
