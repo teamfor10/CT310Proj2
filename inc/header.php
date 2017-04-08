@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <title>Ingredients For You</title>
-  <?php echo "<link rel='stylesheet' href='".__DIR__."../assets/css/style.css' type='text/css' />"; ?>
+  <?php echo "<link rel='stylesheet' href='".__DIR__."/../assets/css/style.css' type='text/css' />"; ?>
   <!-- <link rel='stylesheet' href='./assets/css/style.css' type='text/css' /> -->
   <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
 </head>
@@ -20,7 +20,7 @@
 <body >
   <!-- Use the jumbotron for creating the header for the webpage -->
   <div class="jumbotron text-center">
-    <div id="logo"><img src="../assets/images/logo.png" height="100px" width="auto"></div>
+    <div id="logo"><img src="/../assets/images/logo.png" height="100px" width="auto"></div>
     <div id="title"><h1>Ingredients For You</h1></div>
   </div>
 
