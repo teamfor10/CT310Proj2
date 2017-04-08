@@ -6,14 +6,15 @@ class User {
 	public $hash; /* Hash of password */
 	public $email; /* User's email */
 	public $role; /* User's role: admin or customer */
+	public function __construct($u, $h, $e, $r) {
+		$this->user_name = $u;
+		$this->hash = $h;
+		$this->email = $e;
+		$this->role = $r;
+  }
 }
 function makeNewUser($u, $h, $e, $r) {
-	$u = new User ();
-	$u->user_name = $u;
-	$u->hash = $h;
-	$u->email = $e;
-	$u->role = $r;
-	return $u;
+	return new User ($u, $h, $e, $r);
 }
 function getUserFromRow($row){
 	$user = makeNewUser($row['username'], $row['hash'], $row['email'], $row['role']);

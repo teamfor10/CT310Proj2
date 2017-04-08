@@ -12,10 +12,17 @@
 <div>
   <?php
   $n = new User("user","hash","email","role");
+  $n->user_name = "user";
+  $n->hash = "hash";
+  $n->email = "email";
+  $n->role = "role";
   var_dump($n);
   echo "<br / > <br />";
+  print_r($users);
+  echo "<br / > <br />";
   foreach ($users as $u){
-			echo var_dump(get_object_vars ($u));
+			echo var_dump($u);
+      echo "<br />";
 	}
   ?>
 </div>
