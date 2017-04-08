@@ -12,9 +12,7 @@ class Database extends PDO {
 		foreach ( $result as $row ) {
 			$users [] = getUserFromRow ( $row );
 		}
-		foreach ( $users as $u ) {
-        echo "<p>$u->user_name, $u->hash, $u->email, $u->role</p><br />";
-    }
+		printU($users);
 	}
 
 	function addIngredient($ing, $pic, $cost){
