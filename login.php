@@ -7,6 +7,7 @@
     die;
     // $users = readUsers();
   }
+  $users = $dbh->loadUsers();
   include 'inc/header.php';
 ?>
 
