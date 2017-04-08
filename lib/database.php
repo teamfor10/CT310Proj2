@@ -13,7 +13,16 @@ class Database extends PDO {
 			$users [] = getUserFromRow ( $row );
 		}
 	}
-
+	function loadUsers(){
+		$sql = "SELECT * FROM users";
+		$result = $this->query ( $sql );
+		$users = array ();
+		foreach ( $result as $row ) {
+			$users [] = getUserFromRow ( $row );
+		}
+		return $users;
+	}
+	
 	function addIngredient($ing, $pic, $cost){
 
 	}

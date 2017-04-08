@@ -17,7 +17,6 @@ include 'inc/header.php';
       ingredient you need to put some excitement in the kitchen!<br />
       <strong>More Inventory coming soon!</strong></p>
       <br />
-      <?php $dbh->printUsers(); ?>
   </div>
 
 <!-- Add Main Content here -->
@@ -38,7 +37,7 @@ include 'inc/header.php';
           <div class="item active">
             <a style="display:block" href="./MapleSugar.php" >
                 <figure class="ing">
-                    <img  src="./images/maplesugar.jpg" alt="igdt 1" width="250" height="auto">
+                    <img  src="./uploads/maplesugar.jpg" alt="igdt 1" width="250" height="auto">
                     <figcaption><a href="https://en.wikipedia.org/wiki/Maple_sugar">Wikipedia</a></figcaption>
                 </figure>
             </a>
@@ -52,7 +51,7 @@ include 'inc/header.php';
           <div class="item">
             <a style="display:block"  href="./Nori.php">
                 <figure class="ing">
-                    <img  src="./images/nori.jpg" alt="igdt 2" width="250" height="auto">
+                    <img  src="./uploads/nori.jpg" alt="igdt 2" width="250" height="auto">
                     <figcaption><a href="https://en.wikipedia.org/wiki/Nori">Wikipedia</a></figcaption>
                 </figure>
             </a>
@@ -65,7 +64,7 @@ include 'inc/header.php';
           <div class="item">
             <a style="display:block" href="./SesameSeed.php">
                 <figure class="ing">
-                    <img  src="./images/sesameseed.jpg" alt="igdt 3" width="250" height="auto">
+                    <img  src="./uploads/sesameseed.jpg" alt="igdt 3" width="250" height="auto">
                     <figcaption><a href="https://en.wikipedia.org/wiki/Sesame">Wikipedia</a></figcaption>
                 </figure>
             </a>
