@@ -72,34 +72,35 @@ function displaySignUp(){
   </div>";
 }
 
-    function displayEmailList($users){
-        echo "<div class='modal-dialog'>
-            <div class='loginmodal-container'>
-                <h1>Select Username</h1><br>
-                <form method='POST' action='#'>
-                    <select name='userList'>";
-                        foreach ($users as $u) {
-                            $flag = ($u->user_name == $_SESSION['userName']) ? 'selected' : '';
-                            echo "\t\t\t\t<option value='$u->user_name' $flag > $u->user_name </option>\n";
-                        }
-                    echo "</select>
-                    <input type='submit' name='forgot' class='login loginmodal-submit' value='Send Email'>
-                </form>
-            </div>
-        </div>";
-    }
+function displayEmailList($users){
+  echo "<div class='modal-dialog'>
+    <div class='loginmodal-container'>
+      <h1>Select Username</h1><br>
+        <form method='POST' action='#'>
+          <select name='userList'>";
+            foreach ($users as $u) {
+              $flag = ($u->user_name == $_SESSION['userName']) ? 'selected' : '';
+              $s = print_r($u->user_name, 1);
+              echo "\t\t\t\t<option value='$s' $flag > $s </option>\n";
+            }
+          echo "</select>
+          <input type='submit' name='forgot' class='login loginmodal-submit' value='Send Email'>
+        </form>
+      </div>
+    </div>";
+}
 
-    function displayReset(){
-        echo "<div class='modal-dialog'>
-            <div class='loginmodal-container'>
-                <h1>Enter New Password</h1><br>
-                <form method='POST' action='#'>
-                    <input type='password' name='passReset' placeholder='Password'>
-                    <input type='password' name='passReset2' placeholder='Confirm Password'>
-                    <input type='submit' name='newPass' class='login loginmodal-submit' value='Submit'>
-                </form>
-            </div>
-        </div>";
-    }
+function displayReset(){
+  echo "<div class='modal-dialog'>
+    <div class='loginmodal-container'>
+    <h1>Enter New Password</h1><br>
+      <form method='POST' action='#'>
+        <input type='password' name='passReset' placeholder='Password'>
+        <input type='password' name='passReset2' placeholder='Confirm Password'>
+        <input type='submit' name='newPass' class='login loginmodal-submit' value='Submit'>
+      </form>
+    </div>
+  </div>";
+}
 
 ?>
