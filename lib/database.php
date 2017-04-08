@@ -5,14 +5,6 @@ class Database extends PDO {
 		parent::__construct ( "sqlite:" . __DIR__ . "/../ify.db" );
 	}
 
-	function printUsers(){
-		$sql = "SELECT * FROM users";
-		$result = $this->query ( $sql );
-		$users = array ();
-		foreach ( $result as $row ) {
-			$users [] = getUserFromRow ( $row );
-		}
-	}
 	function loadUsers(){
 		$sql = "SELECT * FROM users";
 		$result = $this->query ( $sql );
@@ -22,7 +14,7 @@ class Database extends PDO {
 		}
 		return $users;
 	}
-	
+
 	function addIngredient($ing, $pic, $cost){
 
 	}
