@@ -1,7 +1,7 @@
 <?php
-$loginPage = FALSE;
-$helpPage = TRUE;
-include 'inc/control.php';
+  $loginPage = FALSE;
+  $helpPage = TRUE;
+  require_once "inc/page_setup.php";
   // Unset all of the session variables.
   $_SESSION = array();
 
