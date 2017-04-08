@@ -17,8 +17,7 @@
 
 		<div class="hidden-xs hidden-sm col-md-3 col-lg-4" id="footerRight">
 			<!-- Logo here -->
-			<?php echo "<img src='".__DIR__."/../assets/images/logo.png' height='50px' width='auto'>"; ?>
-			<!-- <img src="./assets/images/logo.png" height="50px" width="auto"> -->
+			<img src="../assets/images/logo.png" height="50px" width="auto">
 		</div>
 		<!-- End of footer right division -->
 
