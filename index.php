@@ -1,10 +1,9 @@
 <!-- Includes -->
 <?php
+require_once "inc/page_setup.php";
 $loginPage = FALSE;
 $helpPage = FALSE;
-include 'support.php';
-include 'control.php';
-include 'header.php';
+include 'inc/header.php';
 ?>
 
 <!-- create three coulumn with lg and md size  -->
@@ -89,4 +88,4 @@ include 'header.php';
     </div>
 
 </div>
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>

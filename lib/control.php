@@ -1,5 +1,5 @@
 <?php
-  session_name('IFY_01');
+  session_name('IFY_02');
   session_start();
   $host = $_SERVER['HTTP_HOST'];
   $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
@@ -18,7 +18,7 @@
     exit ();
   }
 
-  
+
   function comment(){
     if(isset($_SESSION['username'])){
       echo "<div id='comment'>";
@@ -50,13 +50,13 @@
             <input type='password' name='password' placeholder='Password'>
             <input type='submit' name='login' class='login loginmodal-submit' value='Login'>
           </form>
-          <p><a href='signup.php'>Do Not Have Credentials?</a></p>
-          <p><a href='fmp.php'>Forgot Your Password?</a></p>
+          <!--<p><a href='signup.php'>Do Not Have Credentials?</a></p>-->
+          <p><a href='../fmp.php'>Forgot Your Password?</a></p>
         </div>
       </div>
     </div>";
   }
-  
+
 function displaySignUp(){
   echo "<div class='modal-dialog'>
     <div class='loginmodal-container'>
@@ -71,7 +71,7 @@ function displaySignUp(){
     </div>
   </div>";
 }
-    
+
     function displayEmailList($users){
         echo "<div class='modal-dialog'>
             <div class='loginmodal-container'>
@@ -88,7 +88,7 @@ function displaySignUp(){
             </div>
         </div>";
     }
-    
+
     function displayReset(){
         echo "<div class='modal-dialog'>
             <div class='loginmodal-container'>
