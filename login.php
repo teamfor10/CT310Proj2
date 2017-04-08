@@ -9,25 +9,7 @@
   }
   include 'inc/header.php';
 ?>
-<div>
-  <?php
-  $n = new User("user","hash","email","role");
-  $n->user_name = "user";
-  $n->hash = "hash";
-  $n->email = "email";
-  $n->role = "role";
-  var_dump($n);
-  echo "<br /><p>MY VALUES: $n->user_name, $n->hash, $n->email, $n->role</p>";
-  echo "<br / > <br />";
-  // print_r($users);
-  // echo "<br / > <br />";
-  foreach ($users as $u){
-			echo var_dump($u);
-      echo "<br />";
-      echo "<p>MY VALUES: $u->user_name, $u->hash, $u->email, $u->role</p><br /><br />";
-	}
-  ?>
-</div>
+
 <div id="login">
   <?php if(isset($_POST['login'])):
     $time = date("H:i m/d/Y", time());
