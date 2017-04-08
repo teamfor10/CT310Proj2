@@ -11,12 +11,6 @@ class Database extends PDO {
 		$users = array ();
 		foreach ( $result as $row ) {
 			$users [] = getUserFromRow ( $row );
-			$a = $row['username'];
-			$b = $row['hash'];
-			$c = $row['email'];
-			$d = $row['role'];
-			echo "<p>$a, $b, $c, $d</p><br />";
-			$user = makeNewUser($row['username'], $row['hash'], $row['email'], $row['role']);
 		}
 	}
 

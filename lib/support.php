@@ -8,11 +8,13 @@ class User {
 	public $role; /* User's role: admin or customer */
 }
 function makeNewUser($u, $h, $e, $r) {
+	echo "<p>$u, $h, $e, $r</p><br />";
 	$u = new User ();
 	$u->user_name = $u;
 	$u->hash = $h;
 	$u->email = $e;
 	$u->role = $r;
+	echo "<p>And now: $u->user_name, $u->hash, $u->email, $u->role</p><br />";
 	return $u;
 }
 function getUserFromRow($row){
