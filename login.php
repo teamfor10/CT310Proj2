@@ -1,7 +1,7 @@
 <?php
-  require_once "inc/page_setup.php";
   $loginPage = TRUE;
   $helpPage = FALSE;
+  require_once "inc/page_setup.php";
   $users = readUsers();
   include 'inc/header.php';
 ?>

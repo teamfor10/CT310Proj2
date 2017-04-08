@@ -1,6 +1,6 @@
 <?php
 $loginPage = FALSE;
-include 'control.php';
+include 'inc/control.php';
 
 // http://php.net/manual/en/function.session-destroy.php
 //if(isset($_SESSION['username'])){

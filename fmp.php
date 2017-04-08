@@ -1,10 +1,9 @@
 <?php
   $loginPage = FALSE;
   $helpPage = TRUE;
-  include 'control.php';
-  include 'support.php';
+  require_once "inc/page_setup.php";
   $users = readUsers();
-  include 'header.php';
+  include './inc/header.php';
 ?>
 <div id="login">
   <?php if(isset($_POST['forgot'])):
@@ -29,4 +28,4 @@
   <?php endif; ?>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include './inc/footer.php'; ?>

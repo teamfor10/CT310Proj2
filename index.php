@@ -1,8 +1,8 @@
 <!-- Includes -->
 <?php
-require_once "inc/page_setup.php";
 $loginPage = FALSE;
 $helpPage = FALSE;
+require_once "inc/page_setup.php";
 include 'inc/header.php';
 ?>
 

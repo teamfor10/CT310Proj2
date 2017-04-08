@@ -1,10 +1,9 @@
 <?php
   $loginPage = FALSE;
   $helpPage = TRUE;
-  include 'support.php';
-  include 'control.php';
+  require_once "inc/page_setup.php";
   $users = readUsers();
-  include 'header.php';
+  include 'inc/header.php';
 ?>
 
 <div id="login">
@@ -39,4 +38,4 @@
   <?php endif; ?>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
