@@ -89,8 +89,11 @@ function setPassword($users, $user_name, $h) {
 }
 function printU($users) {
     foreach ( $users as $u ) {
-				echo $u;
-        echo "<p>$u</p><br />";
+			echo $u->user_name;
+			echo $u->hash;
+			echo $u->email;
+			echo $u->role;
+        // echo "<p>$u</p><br />";
     }
 }
 function __toString() {
