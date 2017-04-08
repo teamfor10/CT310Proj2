@@ -20,6 +20,7 @@
       $h = password_hash($newPass, PASSWORD_BCRYPT);
       $user_name = $_SESSION['resetName'];
       setPassword($users, $user_name, $h);
+      $dbh->updatePassword($user_name, $h);
       writeUsers($users);
       header("Location: https://$host$uri/login.php");
       exit();
