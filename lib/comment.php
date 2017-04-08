@@ -1,6 +1,6 @@
 <?php
 
-class Ingredient {
+class comment {
 	public $cid; /* Unique identifier */
 	public $author; /* Creator of comment */
 	public $ip; /* IP address of author */
