@@ -23,9 +23,9 @@
     $content = $content.$urlKey;
     error_reporting(0);
     if(mail($sendmail, $subject, $content)){
-            echo "<p>Your message has been sent successfully</p><br />";
+      echo "<p>Your message has been sent successfully</p><br />";
     } else{
-            echo "<p>Something went wrong in sending your message</p><br />";
+      echo "<p>Something went wrong in sending your message</p><br />";
     }
   ?>
   <?php else: displayEmailList($users) ?>
