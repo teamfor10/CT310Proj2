@@ -1,9 +1,8 @@
-<?php 
+<?php
   $loginPage = FALSE;
   $helpPage = FALSE;
-  include 'support.php';
-  include 'control.php';
-  include 'header.php';
+  require_once "inc/page_setup.php";
+  include 'inc/header.php';
 ?>
 <h1 style="text-align:center;">About Us</h1>
 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -28,4 +27,4 @@
     </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>

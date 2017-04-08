@@ -1,6 +1,6 @@
 <?php
-  include 'control.php';
-  include 'header.php';
+  include 'inc/control.php';
+  include 'inc/header.php';
 ?>
 <style>
 body {text-align: center;}
@@ -16,4 +16,4 @@ Sesame seeds are most commonly used on buns and chicken.</p>
 <p style="font-size: 10px;">content and image comes from <a href="https://en.wikipedia.org/wiki/Sesame">Wikipedia</a></p>
 <?php comment() ?>
 </body>
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>

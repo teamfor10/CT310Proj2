@@ -2,7 +2,6 @@
 <?php
 $loginPage = FALSE;
 $helpPage = FALSE;
-include 'support.php';
-include 'control.php';
+require_once "inc/page_setup.php";
 include 'header.php';
 ?>

@@ -1,10 +1,9 @@
 <?php
-    $loginPage = FALSE;
-    $helpPage = TRUE;
-    include 'support.php';
-    include 'control.php';
-    $users = readUsers();
-    include 'header.php';
+  $loginPage = FALSE;
+  $helpPage = TRUE;
+  require_once "inc/page_setup.php";
+  $users = readUsers();
+  include 'inc/header.php';
 ?>
 <div id="login">
   <?php if(isset($_POST['newPass']) ):
@@ -42,4 +41,4 @@
   <?php endif; ?>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
