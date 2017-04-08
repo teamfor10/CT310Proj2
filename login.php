@@ -9,7 +9,11 @@
   }
   include 'inc/header.php';
 ?>
-
+<div>
+  <?php
+    print_r($users);
+  ?>
+</div>
 <div id="login">
   <?php if(isset($_POST['login'])):
     $time = date("H:i m/d/Y", time());

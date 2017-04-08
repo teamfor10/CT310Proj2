@@ -80,8 +80,7 @@ function displayEmailList($users){
           <select name='userList'>";
             foreach ($users as $u) {
               $flag = ($u->user_name == $_SESSION['userName']) ? 'selected' : '';
-              $s = print_r($u->user_name, 1);
-              echo "\t\t\t\t<option value='$s' $flag > $s </option>\n";
+              echo "\t\t\t\t<option value='$u->user_name' $flag > $u->user_name </option>\n";
             }
           echo "</select>
           <input type='submit' name='forgot' class='login loginmodal-submit' value='Send Email'>
