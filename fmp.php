@@ -13,7 +13,6 @@
   <?php if(isset($_POST['forgot'])):
     $choice = $_POST['userList'];
     $sendmail = emailByName($users, $choice);
-    echo "<p>An email will be sent to $sendmail</p><br />";
     $subject = "CT310 HW6 Forgotten Password";
     $content = "https://$host$uri/passwordreset.php?key=";
     $str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -23,9 +22,9 @@
     $content = $content.$urlKey;
     error_reporting(0);
     if(mail($sendmail, $subject, $content)){
-      echo "<p>Your message has been sent successfully</p><br />";
+      echo "<p>An email has been sent.</p><br />";
     } else{
-      echo "<p>Something went wrong in sending your message</p><br />";
+      echo "<p>Something went wrong in sending your email.</p><br />";
     }
   ?>
   <?php else: displayEmailList($users) ?>
