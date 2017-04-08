@@ -4,7 +4,6 @@ class Database extends PDO {
 	public function __construct() {
 		parent::__construct ( "sqlite:" . __DIR__ . "/../ify.db" );
 	}
-
 	function loadUsers(){
 		$sql = "SELECT * FROM users";
 		$result = $this->query ( $sql );
@@ -14,7 +13,12 @@ class Database extends PDO {
 		}
 		return $users;
 	}
-
+	function updatePassword($u, $h){
+		$sql = "UPDATE users SET hash = ?
+						WHERE username = ?";
+		$stm = $this->prepare( $sql );
+		return $stm->execute(array($h, $u));
+	}
 	function addIngredient($ing, $pic, $cost){
 
 	}
