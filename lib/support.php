@@ -1,31 +1,30 @@
 <?php
 
-require_once "assets/passwordLib.php";
+require_once "../assets/passwordLib.php";
 
 class User {
 	public $user_name = 'johndoe'; /* User's login name */
 	public $hash = ''; /* Hash of password */
 	public $email = ''; /* User's email */
+	public $role = ''; /* User's role: admin or customer */
 }
-function makeNewUser($u, $h, $e) {
+function makeNewUser($u, $h, $e, $r) {
 	$u = new User ();
 	$u->user_name = $u;
 	$u->hash = $h;
 	$u->email = $e;
+	$u->role = $r;
 	return $u;
 }
 function setupDefaultUsers() {
-	// $users = array ();
-	// $i = 0;
-	// $users [$i ++] = makeNewUser ( 'astaven', '$2a$10$xLNb4kaqLUxrncEnkor6buctTjNk8xjyU8M6sK/7alZtZLKmBL2ni', 'asa.staven@gmail.com' );
-	// $users [$i ++] = makeNewUser ( 'ct310', '$2a$10$l6vaA7Bkh866mDsM4Dt15ehp207cf.t64ucU7j0C0VJovRd99xVOi', 'nspatil@colostate.com' );
-	// writeUsers ( $users );
-	$line1 = 'user_name,hash,email' . "\n";
-	$line2 = 'astaven,$2a$10$xLNb4kaqLUxrncEnkor6buctTjNk8xjyU8M6sK/7alZtZLKmBL2ni,asa.staven@gmail.com'. "\n";
-	$line3 = 'ct310,$2a$10$l6vaA7Bkh866mDsM4Dt15ehp207cf.t64ucU7j0C0VJovRd99xVOi,nspatil@colostate.com'. "\n";
+	$line1 = 'user_name,hash,email,role' . "\n";
+	$line2 = 'astaven,$2a$10$xLNb4kaqLUxrncEnkor6buctTjNk8xjyU8M6sK/7alZtZLKmBL2ni,asa.staven@gmail.com,admin'. "\n";
+	$line3 = 'ktmangus,$2a$07$AJNJsAhn0NI4Hq7Lat96kOPDGtLn/hzN5WluBLupges/wr5rlCFxq,ktmangus@rams.colostate.edu,admin'."\n";
+	$line4 = 'ct310,$2a$10$l6vaA7Bkh866mDsM4Dt15ehp207cf.t64ucU7j0C0VJovRd99xVOi,nspatil@colostate.com,admin'. "\n";
 	file_put_contents('users.csv', $line1);
 	file_put_contents('users.csv', $line2, FILE_APPEND);
 	file_put_contents('users.csv', $line3, FILE_APPEND);
+	file_put_contents('users.csv', $line4, FILE_APPEND);
 }
 function writeUsers($users) {
     $fh = fopen ( 'users.csv', 'w+' ) or die ( "Can't open file" );
@@ -55,22 +54,28 @@ function readUsers() {
     return $users;
 }
 function userHashByName($users, $user_name) {
-    $res = '';
     foreach ( $users as $u ) {
         if ($u->user_name == $user_name) {
-            $res = $u->hash;
+            return $u->hash;
         }
     }
-    return $res;
+    return '';
 }
 function emailByName($users, $user_name) {
-    $res = '';
     foreach ( $users as $u ) {
         if ($u->user_name == $user_name) {
-            $res = $u->email;
+            return $u->email;
         }
     }
-    return $res;
+    return '';
+}
+function getRole($users, $user_name) {
+    foreach ( $users as $u ) {
+        if ($u->user_name == $user_name) {
+            return $u->role;
+        }
+    }
+    return '';
 }
 function setPassword($users, $user_name, $h) {
     foreach ( $users as $u ) {
@@ -81,7 +86,7 @@ function setPassword($users, $user_name, $h) {
 }
 function printU($users) {
     foreach ( $users as $u ) {
-        echo "<p>$u->user_name, $u->hash, $u->email</p><br />";
+        echo "<p>$u->user_name, $u->hash, $u->email, $u->role</p><br />";
     }
 }
 ?>
