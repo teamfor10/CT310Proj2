@@ -11,8 +11,11 @@
 ?>
 <div>
   <?php
+  $n = new User("user","hash","email","role");
+  var_dump($n);
+  echo "<br / > <br />";
   foreach ($users as $u){
-			echo get_object_vars ($u);
+			echo var_dump(get_object_vars ($u));
 	}
   ?>
 </div>

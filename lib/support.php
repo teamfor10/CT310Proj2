@@ -13,15 +13,6 @@ function makeNewUser($u, $h, $e, $r) {
 	$u->hash = $h;
 	$u->email = $e;
 	$u->role = $r;
-
-	
-
-	var_dump($u);
-	var_dump(get_object_vars($u));
-	print_r($u);
-	if("astaven" == $u->user_name){
-		echo "<p>we have a match<p><br />";
-	}
 	return $u;
 }
 function getUserFromRow($row){
