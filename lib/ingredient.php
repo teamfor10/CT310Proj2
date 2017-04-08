@@ -1,7 +1,7 @@
-<?php
+<!-- <?php
 require_once ("comment.php");
 
-class Ingredient {
+// class ingredient {
 	public $name; /* Ingredient name */
 	public $file_name; /* File name of ingredient pic */
 	public $price; /* Cost of ingredient */
@@ -26,4 +26,4 @@ function getIngredientsFromRow($row, $coms){
 	$user = makeNewIngredient($row['name'], $row['file_name'], $row['price'], $comment);
 	return $user;
 }
-?>
+?> -->
