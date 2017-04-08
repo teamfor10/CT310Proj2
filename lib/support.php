@@ -17,6 +17,7 @@ function makeNewUser($u, $h, $e, $r) {
 }
 function getUserFromRow($row){
 	$user = makeNewUser($row['username'], $row['hash'], $row['email'], $row['role']);
+	print_r($user);
 	return $user;
 }
 function setupDefaultUsers() {
