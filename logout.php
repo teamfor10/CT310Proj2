@@ -17,6 +17,7 @@ include 'inc/control.php';
 
   // Finally, destroy the session.
   session_destroy();
-  header ( "Location: https://$host$uri/login.php" );
+  echo "<p> You did it </p>";
+  // header ( "Location: https://$host$uri/login.php" );
   exit();
 ?>
