@@ -8,11 +8,12 @@ class User {
 	public $role; /* User's role: admin or customer */
 }
 function makeNewUser($u, $h, $e, $r) {
+	echo "<p>user: $u, hash: $h, email: $e, role: $r</p><br />";
 	$u = new User ();
-	$u->user_name = (string)$u;
-	$u->hash = (string)$h;
-	$u->email = (string)$e;
-	$u->role = (string)$r;
+	$u->user_name = $u;
+	$u->hash = $h;
+	$u->email = $e;
+	$u->role = $r;
 	if("astaven" == $u->user_name){
 		echo "<p>we have a match<p><br />";
 	}
