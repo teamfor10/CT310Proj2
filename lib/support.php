@@ -87,20 +87,4 @@ function setPassword($users, $user_name, $h) {
         }
     }
 }
-function printU($users) {
-    foreach ( $users as $u ) {
-			echo $u->user_name;
-			echo $u->hash;
-			echo $u->email;
-			echo $u->role;
-        // echo "<p>$u</p><br />";
-    }
-}
-function __toString() {
-	$u = (string)$this->user_name;
-	$h = (string)$this->hash;
-	$e = (string)$this->email;
-	$r = (string)$this->role;
-  return "$u, $h, $e, $r";
-}
 ?>

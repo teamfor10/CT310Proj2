@@ -2,10 +2,10 @@
   $loginPage = FALSE;
   $helpPage = TRUE;
   require_once "inc/page_setup.php";
-  // $users = readUsers();
   if (!$dbh = setupDB()) {
-    die;
-    // $users = readUsers();
+    $users = readUsers();
+  } else{
+    $users = $dbh->loadUsers();
   }
   include './inc/header.php';
 ?>

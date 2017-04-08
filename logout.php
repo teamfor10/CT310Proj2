@@ -1,5 +1,6 @@
 <?php
 $loginPage = FALSE;
+$helpPage = TRUE;
 include 'inc/control.php';
   // Unset all of the session variables.
   $_SESSION = array();
