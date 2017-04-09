@@ -6,7 +6,7 @@ require_once "inc/page_setup.php";
 if (!$dbh = setupDB()) {die;}
 include 'inc/header.php';
 ?>
-<div class = "shopCart">
+<div class="shopCart">
 
 
 </div>
