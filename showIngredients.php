@@ -26,6 +26,7 @@
           comment();
           echo "</body>";
     ?>
+    
     <?php else: displayIngredientList($ings) ?>
     <?php endif; ?>
 </div>
