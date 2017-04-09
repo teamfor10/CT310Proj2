@@ -11,29 +11,44 @@
 ?>
 
 <div>
-    <?php if(isset($_GET['ingred'])):
+    <?php if(isset($_POST['addTo'])):
+        $dbh -> addCart($_POST['userIng'], $_POST['ingName']);
+        header ( "Location: https://$host$uri/index.php" );
+        exit();
+    ?>
+    <?php elseif(isset($_GET['ingred'])):
         $choice = $_GET['ingList'];        
         $pic = picByName($ings, $choice);
         $price = priceByName($ings, $choice);
-        $text = textByName($ings, $choice);
         
         echo "<style>body {text-align: center;}</style>
         <body>
           <h1>$choice</h1>
-          <img  src='./uploads/$pic' alt='igdt 2' width='250' height='auto'>
-          <p>$text[0]</p>
-          <p style='font-size: 10px;'>content and image comes from <a href='$text[1]'>$text[1]</a></p>";
-          comment();
-          echo "</body>
-            <div class='addCart'>
-                <form>
-                    <input id='addTo' type='submit' value='Add To Cart'>
+          <img  src='./uploads/$pic' alt='igdt 2' width='250' height='auto'>";
+          if(isset($_POST['usercomment'])){
+            // Sanitize comments
+            $_POST['comments'] = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
+            $dbh->addComment('', $_POST['comments'], $_SESSION['userName'], $choice);
+          }else{ if($_SESSION['userType'] == 'admin'){ comment();} }
+          
+          $text = textByName($ings, $choice);
+          $size = count($text);
+          for($num = 0; $num < $size; $num++){
+                $c = $text[$num];
+                if($num == $size - 1){
+                    echo "<p style='font-size: 10px;'>content and image comes from <a href='$c'>$c</a></p>";
+                }
+                else{ echo "<p>$c</p></br>";}
+          }
+        
+          $var = $_SESSION['userName'];
+          echo "<div class='addCart'>
+                <form method='POST' action='#'>
+                    <input type='hidden' name='userIng' value='$var'>
+                    <input type='hidden' name='ingName' value='$choice'>
+                    <input type='submit' name='addTo'value='Add To Cart'>
                 </form>
-            </div>";
-            if(isset($_POST['submit'])){
-                $dbh -> addCart();
-            // needs a name and user who submitted the order
-            }
+            </div></body>";
     ?>
     
     <?php else: displayIngredientList($ings) ?>
