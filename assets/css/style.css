@@ -61,6 +61,13 @@ body{
 #comment{
   margin-left: 10px;
 }
+#addTo{
+  margin-top: 15px;
+  background-color: #F4DECB;
+  border-style: double;
+   border-color: #49274A;
+  width: 100px;
+}
 .ing{
     text-align: center;
 }
