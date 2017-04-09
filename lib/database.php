@@ -63,10 +63,9 @@ class Database extends PDO {
 
     function addComment($ip, $c, $a, $ing){
     $time = date("H:i m/d/Y", time());
-    
-    $sql = "INSERT INTO comments VALUES (?,?,?,?,?,?)"; //may be a problem with the cid being 0
+    $sql = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (?,?,?,?,?)";
             $stm = $this -> prepare($sql);
-            return $stm->execute(array(0, NULL, $time, $c, $a, $ing));
+            return $stm->execute(array(NULL, $time, $c, $a, $ing));
     }
 
     function upload($name, $file_name, $price, $description, $link){
