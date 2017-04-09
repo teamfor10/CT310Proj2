@@ -21,7 +21,7 @@ if(isset($_POST["submitfrm"])){
     $dbh->upload($ingName, $image, $price, $description, $attributes);
     //$upload->addIngredient($ingName, $fileName, $price);
     // addIngredient($ing,$fileName,$price);
-    
+    header('Location: showIngredients.php');
 }
 
 ?>
