@@ -70,12 +70,6 @@ class Database extends PDO {
 		addIngredient($name, $file_name, $price);
 	}
 
-	function upload($name, $file_name, $price, $description, $link){
-		$sql1 = "INSERT INTO comments VALUES (0, NULL, NULL, $description, NULL, $name)";
-		$sql2 = "INSERT INTO comments VALUES (0, NULL, NULL, $link, NULL, $name)";
-		addIngredient($name, $file_name, $price);
-	}
-
 	function addCart(){
 		$sql = "INSERT INTO shopping_cart VALUES ($user, $ing)";
 		$stm = $this -> prepare($sql);

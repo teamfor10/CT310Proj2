@@ -15,7 +15,7 @@ if(isset($_POST["submitfrm"])){
     $description = $_POST['description'];
     $attributes = $_POST['attributes'];
 
-    addIngredient($ingName, $fileName, $price);
+    upload($ingName, $fileName, $price, $description, $attributes);
     
 }
 
