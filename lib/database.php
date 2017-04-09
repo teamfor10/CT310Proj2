@@ -85,6 +85,12 @@ class Database extends PDO {
 		// ) );
 	}
 
+	function addCart(){
+		$sql = "INSERT INTO shopping_cart VALUES ($user, $ing)";
+		$stm = $this -> prepare($sql);
+		return $stm->execute(array($user, $ing));
+	}
+
 
 }
 function setupDB() {

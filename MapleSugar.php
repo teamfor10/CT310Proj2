@@ -1,6 +1,13 @@
 <?php
   include 'lib/control.php';
   include 'inc/header.php';
+  if (!$dbh = setupDB()) {die;}
+
+  if(isset($_POST['submit'])){
+   $dbh -> addCart();
+  // needs a name and user who submitted the order
+  }
+
 ?>
 <style>
 body {text-align: center;}
