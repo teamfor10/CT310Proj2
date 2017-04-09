@@ -23,7 +23,7 @@ Maple sugar was first used by native americans because it was easy to transport 
 <p style="font-size: 10px;">content and image comes from <a href="https://en.wikipedia.org/wiki/Maple_sugar">Wikipedia</a></p>
 
 <div class="addCart">
-  <from>
+  <form>
     <input id="addTo" type="submit" value="Submit">
   </form>
 </div>
