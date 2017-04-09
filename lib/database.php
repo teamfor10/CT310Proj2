@@ -56,11 +56,21 @@ class Database extends PDO {
 	}
 
 	function addIngredient($ing, $pic, $cost){
-
+		$sql = "INSERT INTO ingredients VALUES ($ing, $pic, $cost)";
+		$stm = $this -> prepare($sql);
+		return $stm->execute(array($user, $ing));
 	}
-	function addComment($author, $ip, $time, $text, $ing){
 
+	function addComment(){
+		
 	}
+
+	function addCart(){
+		$sql = "INSERT INTO shopping_cart VALUES ($user, $ing)";
+		$stm = $this -> prepare($sql);
+		return $stm->execute(array($user, $ing));
+	}
+
 	function deleteComment(){
 		// Anyone see this issues with the way I am deleting?
 	// 	$sql = "DELETE FROM album WHERE album_id = $album";
@@ -84,14 +94,6 @@ class Database extends PDO {
 		// 		":id" => $album->id
 		// ) );
 	}
-
-	function addCart(){
-		$sql = "INSERT INTO shopping_cart VALUES ($user, $ing)";
-		$stm = $this -> prepare($sql);
-		return $stm->execute(array($user, $ing));
-	}
-
-
 }
 function setupDB() {
 	try {
