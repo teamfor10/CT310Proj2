@@ -20,7 +20,7 @@
 
 
   function comment(){
-    if(isset($_SESSION['username'])){
+    if($_SESSION['userType'] == 'admin'){
       echo "<div id='comment'>";
       if(isset($_POST['usercomment'])){
         // Sanitize comments
@@ -100,6 +100,22 @@ function displayReset(){
       </form>
     </div>
   </div>";
+}
+
+function displayIngredientList($ings){
+  echo "<div class='modal-dialog'>
+    <div class='loginmodal-container'>
+      <h1>Select Ingredient</h1><br>
+        <form method='GET' action='#'>
+          <select name='ingList'>";
+            foreach ($ings as $i) {
+              echo "\t\t\t\t<option value='$i->name' > $i->name </option>\n";
+            }
+          echo "</select>
+          <input type='submit' name='ingred' class='login loginmodal-submit' value='Select'>
+        </form>
+      </div>
+    </div>";
 }
 
 ?>
