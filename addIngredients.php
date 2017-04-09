@@ -6,9 +6,10 @@ require_once "inc/page_setup.php";
 if (!$dbh = setupDB()) {die;}
 include 'inc/header.php';
 ?>
-<div class = "shopCart">
+<form name='input' action="<?php echo $_SERVER['PHP_SELF']; ?>" method='post'> 
 
+<input type='text' value='' id='increase' name='username' placeholder='Enter Username'/>
 
-</div>
+</form>
 
 <?php include 'inc/footer.php'; 

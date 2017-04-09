@@ -1,5 +1,5 @@
 <?php
-  include 'inc/control.php';
+  include 'lib/control.php';
   include 'inc/header.php';
 ?>
 <style>
@@ -14,6 +14,12 @@ The sugar is what is left over after the sap of the sugar maple is boiled<br>
 Maple sugar was first used by native americans because it was easy to transport and lasted a long time.</p>
 
 <p style="font-size: 10px;">content and image comes from <a href="https://en.wikipedia.org/wiki/Maple_sugar">Wikipedia</a></p>
+
+<div class="addCart">
+  <from>
+    <input id="addTo" type="submit" value="Submit">
+  </form>
+</div>
 <?php comment() ?>
 </body>
 <?php include 'inc/footer.php'; ?>
