@@ -55,8 +55,8 @@ class Database extends PDO {
             return $info;
     }
 
- function addIngredient($ing, $pic, $cost){
-            $sql = "INSERT INTO ingredients VALUES (?, ?, ?)";
+    function addIngredient($ing, $pic, $cost){
+            $sql = "INSERT INTO ingredients(name, file_name, price) VALUES (?, ?, ?)";
             $stm = $this->prepare($sql);
             return $stm->execute(array($ing, $pic, $cost));
     }
@@ -68,8 +68,8 @@ class Database extends PDO {
             return $stm->execute(array(NULL, $time, $c, $a, $ing));
     }
 
-    function upload($name, $file_name, $price, $description, $link){
-            $this->addIngredient($name, $file_name, $price);
+    function upload($name, $image, $price, $description, $link){
+            $this->addIngredient($name, $image, $price);
             $sql1 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $description, NULL, $name)";
             $sql2 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $link, NULL, $name)";
 
