@@ -2,6 +2,7 @@
 require_once ("user.php");
 require_once ("comment.php");
 require_once ("ingredient.php");
+require_once ("cart.php");
 
 class Database extends PDO {
     public function __construct() {
@@ -40,21 +41,6 @@ class Database extends PDO {
             }
             return $ings;
     }
-    function getIngredient($ing){
-            $sql1 = "SELECT * FROM ingredients
-                                                    WHERE name = $ing";
-            $sql2 = "SELECT * FROM comments
-                                                    WHERE ingredient = $ing";
-            $result1 = $this->query ( $sql1 );
-            $result2 = $this->query ( $sql2 );
-
-            $info = array ();
-            // foreach ( $result1 as $row ) {
-            // 	$albums [] = Album::getAlbumFromRow ( $row );
-            // }
-            return $info;
-    }
-
     function addIngredient($ing, $pic, $cost){
             $sql = "INSERT INTO ingredients VALUES ($ing, $pic, $cost)";
             $stm = $this -> prepare($sql);
@@ -76,10 +62,29 @@ class Database extends PDO {
 
     function addCart($user, $ing){
             $sql = "INSERT INTO shopping_cart VALUES (?, ?)";
-            $stm = $this -> prepare($sql);
+            $stm = $this->prepare($sql);
             return $stm->execute(array($user, $ing));
     }
-
+    function removeFromCart($user, $ing){
+            $sql = "DELETE FROM shopping_cart WHERE user = ? AND ingredient = ?";
+            $stm = $this->prepare($sql);
+            return $stm->execute(array($user, $ing));
+    }
+    function emptyCart($user){
+            $sql = "DELETE FROM shopping_cart WHERE user = ?";
+            $stm = $this->prepare($sql);
+            return $stm->execute(array($user));
+    }
+    function loadCart($ings){
+        $sql = "SELECT * FROM shopping_cart";
+        $result = $this->query ( $sql );
+        $cart = array ();
+        foreach ( $result as $row ) {
+            $price = priceByName($ings, $row['ingredient']);
+            $cart [] = getCartFromRow ( $row, $price );
+        }
+        return $cart;
+    }
     function deleteComment(){}
     function editComment(){}
 }

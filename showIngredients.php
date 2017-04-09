@@ -31,8 +31,9 @@
             $dbh->addComment('', $_POST['comments'], $_SESSION['userName'], $choice);
             $coms = $dbh->loadComments();
             $ings = $dbh->loadIngredients($coms);
-          }else{ if($_SESSION['userType'] == 'admin'){ comment();} }
-          
+          }
+          comment();
+          //if($_SESSION['userType'] == 'admin'){ comment();}
           $text = textByName($ings, $choice);
           $size = count($text);
           for($num = 0; $num < $size; $num++){
