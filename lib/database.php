@@ -55,23 +55,22 @@ class Database extends PDO {
             return $info;
     }
 
-    function addIngredient($ing, $pic, $cost){
-            $sql = "INSERT INTO ingredients VALUES ($ing, $pic, $cost)";
-            $stm = $this -> prepare($sql);
-            return $stm->execute(array($user, $ing));
+ function addIngredient($ing, $pic, $cost){
+            $sql = "INSERT INTO ingredients VALUES (?, ?, ?)";
+            $stm = $this->prepare($sql);
+            return $stm->execute(array($ing, $pic, $cost));
     }
 
     function addComment($ip, $c, $a, $ing){
     $time = date("H:i m/d/Y", time());
-    
-    $sql = "INSERT INTO comments VALUES (?,?,?,?,?,?)"; //may be a problem with the cid being 0
+    $sql = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (?,?,?,?,?)";
             $stm = $this -> prepare($sql);
-            return $stm->execute(array(0, NULL, $time, $c, $a, $ing));
+            return $stm->execute(array(NULL, $time, $c, $a, $ing));
     }
 
     function upload($name, $file_name, $price, $description, $link){
-            $sql1 = "INSERT INTO comments VALUES (0, NULL, NULL, $description, NULL, $name)";
-            $sql2 = "INSERT INTO comments VALUES (0, NULL, NULL, $link, NULL, $name)";
+            $sql1 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $description, NULL, $name)";
+            $sql2 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (0, NULL, NULL, $link, NULL, $name)";
             addIngredient($name, $file_name, $price);
     }
 

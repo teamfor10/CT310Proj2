@@ -2,20 +2,25 @@
 <?php
 $loginPage = FALSE;
 $helpPage = FALSE;
-require_once "inc/page_setup.php";
+include "inc/page_setup.php";
 if (!$dbh = setupDB()) {die;}
 include 'inc/header.php';
 
-$ingName = $fileName = $price = $description = $attributes ='';
+$ingName = $image = $price = $description = $attributes ='';
+
+
+
 
 if(isset($_POST["submitfrm"])){
     $ingName = $_POST['ingName']; 
-    $fileName = $_POST['fileName'];
+    $image = $_POST['image'];
     $price = $_POST['price']; 
     $description = $_POST['description'];
     $attributes = $_POST['attributes'];
 
-    upload($ingName, $fileName, $price, $description, $attributes);
+    $dbh->upload($ingName, $image, $price, $description, $attributes);
+    //$upload->addIngredient($ingName, $fileName, $price);
+    // addIngredient($ing,$fileName,$price);
     
 }
 
@@ -28,8 +33,16 @@ if(isset($_POST["submitfrm"])){
         <input id="formBox" type='text' value='<?php echo $ingName; ?>' id='ingName' name='ingName' placeholder='Enter Ingredient Name'/>
         <br/>
 
-        <input id="formBox" type='text' value='<?php echo $fileName; ?>' id='fileName' name='fileName' placeholder='Enter File Name'/>
+        <!--<input id="formBox" type='text' value='<?php echo $fileName; ?>' id='fileName' name='fileName' placeholder='Enter File Name'/>-->
         <br/>
+		<!--<label class="sr-only" for="image">Upload Image</label>--> 
+	    <input id="formBox" type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size; ?>" />
+        <br/>
+         
+         <input  type='file' value='<?php echo $image; ?>' id='image' name='image' placeholder='Enter File' class="form-control" style="padding-bottom: 30px;/* margin: 0 auto; */width: 270px;vertical-align: middle;margin-left: 40px;display: inline-block;" />
+		<!--<input id="formBox" type="file" < name="image" id="image" stlye="padding-bottom: 15px;"/>-->
+		<br/>
+
 
         <input id="formBox" type='text' value='<?php echo $price; ?>' id='price' name='price' placeholder='Enter Price'/>
         <br/>
