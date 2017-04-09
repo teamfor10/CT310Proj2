@@ -23,14 +23,12 @@
       if($user != $_SESSION['userName']){
         $_SESSION ['startTime'] = $time;
         $_SESSION ['userName'] = $user;
-
-        if(getRole($users, $user) == 'admin'){
+      }
+      if(getRole($users, $user) == 'admin'){
           $_SESSION['userType'] = 'admin';
           
-        }
-        else{
+      }else{
           $_SESSION['userType'] = 'customer';
-        }
       }
       header("Location: https://$host$uri/index.php");
       exit();

@@ -19,25 +19,17 @@
   if (!$loginPage && !$helpPage && ($_SESSION ['userName'] == "Guest")) {
     header ( "Location: https://$host$uri/login.php" );
     exit ();
+  
   }
 
 
   function comment(){
-    if($_SESSION['userType'] == 'admin'){
       echo "<div id='comment'>";
-      if(isset($_POST['usercomment'])){
-        // Sanitize comments
-        $_POST['comments'] = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
-        echo "<p>" . $_POST['comments'] . "</p>";
-      }
-      else{
         echo "<form method='POST' action='#'>
           <textarea name='comments'></textarea><br />
           <input type='submit' name='usercomment' value='Submit'>
-        </form>";
-      }
+        </form><br />";
       echo "</div>";
-    }
   }
 
   // Login menu functionality from http://bootsnipp.com/snippets/featured/clean-modal-login-form
