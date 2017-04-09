@@ -1,18 +1,18 @@
 <?php
 
-class comment {
-	public $cid; /* Unique identifier */
-	public $author; /* Creator of comment */
-	public $ip; /* IP address of author */
-	public $timestamp; /* Time of creation */
+class Comment {
+  public $cid; /* Unique identifier */
+  public $author; /* Creator of comment */
+  public $ip; /* IP address of author */
+  public $timestamp; /* Time of creation */
   public $comment; /* Text */
   public $ingredient; /* Ingredient comment belongs to */
 
-	public function __construct($id, $ip, $t, $c, $a, $ing) {
-		$this->cid = $id;
-		$this->author = $a;
-		$this->ip = $ip;
-		$this->timestamp = $t;
+public function __construct($id, $ip, $t, $c, $a, $ing) {
+    $this->cid = $id;
+    $this->author = $a;
+    $this->ip = $ip;
+    $this->timestamp = $t;
     $this->comment = $c;
     $this->ingredient = $ing;
   }
