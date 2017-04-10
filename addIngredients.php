@@ -31,8 +31,7 @@ if(isset($_POST["submitfrm"])){
     move_uploaded_file ($_FILES['image']['tmp_name'], "$move");
     chmod($move, 0755);
 
-    $txt1 = "This is text box 1";
-    $txt2 = "This is text box 2";
+    header("Location: showIngredients.php");
    
 }
 
