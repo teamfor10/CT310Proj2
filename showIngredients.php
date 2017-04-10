@@ -20,18 +20,22 @@
         $choice = $_GET['ingList'];        
         $pic = picByName($ings, $choice);
         $price = priceByName($ings, $choice);
+        $comment = textByName($ings, $choice);
         
         echo "<style>body {text-align: center;}</style>
         <body>
           <h1>$choice</h1>
-          <img  src='./uploads/$pic' alt='igdt 2' width='250' height='auto'>";
+          <img  src='./uploads/$pic' alt='igdt 2' width='250' height='auto'>
+          <p>The price of product is $price</p>";
+
           if(isset($_POST['usercomment'])){
             // Sanitize comments
             $_POST['comments'] = filter_var($_POST['comments'], FILTER_SANITIZE_STRING);
-            $dbh->addComment('', $_POST['comments'], $_SESSION['userName'], $choice);
+            echo $dbh->addComment('', $_POST['comments'], $_SESSION['userName'], $choice);
             $coms = $dbh->loadComments();
             $ings = $dbh->loadIngredients($coms);
           }
+
           comment();
           //if($_SESSION['userType'] == 'admin'){ comment();}
           $text = textByName($ings, $choice);

@@ -56,11 +56,13 @@ class Database extends PDO {
 
     function upload($name, $image, $price, $description, $link){
             $this->addIngredient($name, $image, $price);
-            $sql1 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $description, NULL, $name)";
-            $sql2 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $link, NULL, $name)";
+            $this->addComment(NULL, $description, NULL, $name);
+            $this->addComment(NULL, $link, NULL, $name);
+        //     $sql1 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $description, NULL, $name)";
+        //     $sql2 = "INSERT INTO comments (ip,timestamp,comment,author,ingredient) VALUES (NULL, NULL, $link, NULL, $name)";
 
-            $this -> exec($sql1);
-            $this -> exec($sql2);
+        //     $this -> exec($sql1);
+        //     $this -> exec($sql2);
     }
 
     function addCart($user, $ing){
