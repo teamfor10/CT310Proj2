@@ -44,17 +44,13 @@ if(isset($_POST["submitfrm"])){
 
         <input id="formBox" type='text' value='<?php echo $ingName; ?>' id='ingName' name='ingName' placeholder='Enter Ingredient Name'/>
         <br/>
-
-        <!--<input id="formBox" type='text' value='<?php echo $fileName; ?>' id='fileName' name='fileName' placeholder='Enter File Name'/>-->
         <br/>
-		<!--<label class="sr-only" for="image">Upload Image</label>--> 
+ 
 	    <input id="formBox" type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size; ?>" />
         <br/>
          
          <input type='file' value='<?php echo $image; ?>' id='image' name='image' class="form-control" style="padding-bottom: 30px; width: 270px;vertical-align: middle;margin-left: 40px;display: inline-block;" />
-		<!--<input id="formBox" type="file" < name="image" id="image" stlye="padding-bottom: 15px;"/>-->
 		<br/>
-
 
         <input id="formBox" type='text' value='<?php echo $price; ?>' id='price' name='price' placeholder='Enter Price'/>
         <br/>
@@ -63,13 +59,12 @@ if(isset($_POST["submitfrm"])){
         <br/>
 
         <textarea value='<?php echo $description; ?>' style="margin-top: 25px; margin-left: 50px;" rows="4" cols="50" id="formInput" name="description" placeholder='Enter description'></textarea>
-        <?php echo $txt1; ?>
         <br/>
 
         
         
         <?php echo $error; ?>
-        <input type='submit' value='submitfrm' name='submitfrm' class="Submit Form" />
+        <input type='submit' value='Submit Form' name='submitfrm' class="Submit Form" />
 
     </form>
     
