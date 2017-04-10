@@ -19,9 +19,6 @@ if(isset($_POST["submitfrm"])){
     $description = $_POST['description'];
     $attributes = $_POST['attributes'];
 
-    // echo $description;
-    // echo $attributes;
-
     $dbh->upload($ingName, $image, $price, $description, $attributes);
 
     $move = "./uploads/".$_FILES['image']['name'];
