@@ -18,9 +18,6 @@ if(isset($_POST["submitfrm"])){
     $price = $_POST['price']; 
     $description = $_POST['description'];
     $attributes = $_POST['attributes'];
-    $price = $_POST['price']; 
-    $description = $_POST['description'];
-    $attributes = $_POST['attributes'];
 
     // echo $description;
     // echo $attributes;
