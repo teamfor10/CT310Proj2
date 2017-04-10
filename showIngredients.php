@@ -13,7 +13,6 @@
 <div>
     <?php if(isset($_POST['addTo'])):
         $dbh -> addCart($_POST['userIng'], $_POST['ingName']);
-        echo "this is here";
         header ( "Location: https://$host$uri/index.php" );
         exit();
     ?>
@@ -34,16 +33,12 @@
           
           $text = textByName($ings, $choice);
           $size = count($text);
-          echo "before for loop";
           for($num = 0; $num < $size; $num++){
-              echo "before C in for loop";
                 $c = $text[$num];
-                echo "after c before if";
                 if($num == $size - 1){
-                    echo "in if";
                     echo "<p style='font-size: 10px;'>content and image comes from <a href='$c'>$c</a></p>";
                 }
-                else{echo "in else"; echo "<p>$c</p></br>";}
+                else{ echo "<p>$c</p></br>";}
           }
         
           $var = $_SESSION['userName'];
